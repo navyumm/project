@@ -21,7 +21,7 @@ we are seeing mongoDB connection
 1) mongoDB atlas ki site par jaao
 2) waha se link lao
 3) ab mongoose, express, dotenv
- 
+
 # database connection aprroach
 
 1) sara ka sara code -> index.js me likhdo
