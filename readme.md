@@ -27,3 +27,12 @@ we are seeing mongoDB connection
 1) sara ka sara code -> index.js me likhdo
 2) database connected code dusri file me likho aur index.js me aakr usko import karlo
 
+# -------------------------------
+
+
+## 19-03-2024
+
+data accept karne ke liye kuch setup install karo 
+
+- cors -> cross origin resourses sharing
+- cookie-parser 
