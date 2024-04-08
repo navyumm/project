@@ -54,8 +54,67 @@ data accept karne ke liye kuch setup install karo
 
 ```
 npm i mongooseAggregatePaginate
-````
+```
 
 - aur video.model pr import kar lenge
 
-# 
+
+# userModel 
+- password encrypt karne ke liye hume kuch packages install karne pdenge
+
+```
+npm i bcrypt
+npm i jsonwebtoken as jwt
+npm i multer
+```
+
+# All about http
+
+[HTTP](https://app.eraser.io/workspace/XKPkPDDpD17EV6pCaQEc?origin=share)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const { fullName, email, username, password } = req.body
+    // console.log("email: ", email);
+
+    // if(fullName === ""){
+    //     throw new ApiError(400, "fullname is required")
+    // }
+
+    if (
+        [fullName, email, username, password].some((field) => field?.trim() === "")
+    ) {
+        throw new ApiError(400, "All fields are required")
+    }
+
+
+    const existedUser = await User.findOne({
+        $or: [{ username }, { email }]
+    })
+
+    if (existedUser) {
+        throw new ApiError(409, "User with email or username already exists.")
+
+    }
