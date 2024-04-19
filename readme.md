@@ -96,25 +96,5 @@ npm i multer
 
 
 
-    const { fullName, email, username, password } = req.body
-    // console.log("email: ", email);
-
-    // if(fullName === ""){
-    //     throw new ApiError(400, "fullname is required")
-    // }
-
-    if (
-        [fullName, email, username, password].some((field) => field?.trim() === "")
-    ) {
-        throw new ApiError(400, "All fields are required")
-    }
 
 
-    const existedUser = await User.findOne({
-        $or: [{ username }, { email }]
-    })
-
-    if (existedUser) {
-        throw new ApiError(409, "User with email or username already exists.")
-
-    }
