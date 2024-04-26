@@ -13,7 +13,7 @@ step :
 6) prettier ko install karo 
 
 
-## 13-03-2024
+---
 
 we are seeing mongoDB connection 
 
@@ -28,7 +28,7 @@ we are seeing mongoDB connection
 
 
 
-## 19-03-2024
+---
 
 data accept karne ke liye kuch setup install karo 
 
